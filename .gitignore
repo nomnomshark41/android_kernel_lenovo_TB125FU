@@ -21,7 +21,6 @@
 *.elf
 *.gcno
 *.gz
-*.i
 *.ko
 *.lex.c
 *.ll
@@ -34,7 +33,6 @@
 *.o.*
 *.order
 *.patch
-*.s
 *.so
 *.so.dbg
 *.su
