@@ -178,7 +178,7 @@ vdso_prepare: prepare0
 	$(if $(CONFIG_COMPAT_VDSO),$(Q)$(MAKE) \
 		$(build)=arch/arm64/kernel/vdso32  \
 		include/generated/vdso32-offsets.h)
-
+endif
 
 define archhelp
   echo  '* Image.gz      - Compressed kernel image (arch/$(ARCH)/boot/Image.gz)'
