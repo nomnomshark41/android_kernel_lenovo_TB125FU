@@ -158,6 +158,7 @@ dtbs_install:
 PHONY += vdso_install
 vdso_install:
 	$(Q)$(MAKE) $(build)=arch/arm64/kernel/vdso $@
+	$(Q)$(MAKE) $(build)=arch/arm64/kernel/vdso32 $@
 
 # We use MRPROPER_FILES and CLEAN_FILES now
 archclean:
@@ -171,13 +172,9 @@ ifeq ($(KBUILD_EXTMOD),)
 # asm-offsets.h is built in prepare0, for which archprepare is a dependency.
 # Therefore we need to generate the header after prepare0 has been made, hence
 # this hack.
-prepare: vdso_prepare
-vdso_prepare: prepare0
-    @if [ ! -f arch/arm64/kernel/vdso/gen_vdso_offsets.sh ]; then \
-        echo "Error: gen_vdso_offsets.sh not found in arch/arm64/kernel/vdso/"; \
-        exit 1; \
-    fi
-    $(Q)$(MAKE) $(build)=arch/arm64/kernel/vdso include/generated/vdso-offsets.h
+PHONY += vdso_install
+vdso_install:
+    $(Q)$(MAKE) $(build)=arch/arm64/kernel/vdso $@
 endif
 
 define archhelp
