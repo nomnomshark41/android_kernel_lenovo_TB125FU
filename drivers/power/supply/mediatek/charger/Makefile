@@ -23,6 +23,7 @@ subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/pmic/include
 subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/typec/tcpc/inc
 subdir-ccflags-y += -I$(srctree)/drivers/power/supply/mediatek/misc/
 subdir-ccflags-y += -I$(srctree)/drivers/power/supply/mediatek/battery/
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat
 
 obj-y += charger_class.o mtk_charger.o mtk_switch_charging.o mtk_pdc_intf.o\
 	 mtk_chg_type_det.o mtk_pe40_intf.o mtk_linear_charging.o\
