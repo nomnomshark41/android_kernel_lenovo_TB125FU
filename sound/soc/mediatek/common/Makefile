@@ -3,7 +3,7 @@
 ifeq ($(CONFIG_MTK_GCOV_KERNEL),y)
 GCOV_PROFILE := y
 endif
-
+subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/
 # platform driver
 snd-soc-mtk-common-objs := mtk-afe-platform-driver.o mtk-afe-fe-dai.o
 ifeq (, $(filter y,$(CONFIG_MACH_MT6761) $(CONFIG_MACH_MT6765) $(CONFIG_MACH_MT6779)))
