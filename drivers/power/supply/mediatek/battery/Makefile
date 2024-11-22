@@ -13,7 +13,7 @@
 
 
 MTK_PLATFORM := $(subst ",,$(CONFIG_MTK_PLATFORM))
-subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/
+
 ifeq ($(CONFIG_MTK_GAUGE_VERSION),30)
 	obj-y += mtk_battery.o mtk_power_misc.o mtk_gauge_coulomb_service.o mtk_gauge_class.o mtk_battery_recovery.o mtk_battery_core.o
 	obj-$(CONFIG_GAUGE_MM8013) += mm8013.o
