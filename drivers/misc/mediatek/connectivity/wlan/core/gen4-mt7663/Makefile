@@ -361,7 +361,7 @@ ccflags-y += -I$(srctree)/drivers/misc/mediatek/thermal/common/inc
 
 ifeq ($(MTK_CPU_SCHED),y)
 ccflags-y += -DCFG_SUPPORT_MTK_CPU_SCHED=1
-ccflags-y += -Werror -I$(srctree)/drivers/misc/mediatek/sched/mtk_cpu_affinity
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/sched/mtk_cpu_affinity
 else
 ccflags-y += -DCFG_SUPPORT_MTK_CPU_SCHED=0
 endif

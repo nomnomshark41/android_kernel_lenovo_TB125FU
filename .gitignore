@@ -42,7 +42,7 @@
 *.xz
 Module.symvers
 modules.builtin
-
+/out
 #
 # Top-level generic files
 #
