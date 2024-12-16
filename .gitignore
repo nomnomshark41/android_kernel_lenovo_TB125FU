@@ -43,6 +43,7 @@
 Module.symvers
 modules.builtin
 /out
+build.log
 #
 # Top-level generic files
 #
@@ -130,3 +131,4 @@ all.config
 
 # Kdevelop4
 *.kdev4
+build.log
