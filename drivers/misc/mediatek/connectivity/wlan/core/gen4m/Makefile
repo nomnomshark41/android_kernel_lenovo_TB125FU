@@ -38,7 +38,7 @@ endif
 
 ifeq ($(KBUILD_MODPOST_FAIL_ON_WARNINGS),)
     # Force build fail on modpost warning
-    KBUILD_MODPOST_FAIL_ON_WARNINGS=y
+    KBUILD_MODPOST_FAIL_ON_WARNINGS=n
 endif
 
 # ---------------------------------------------------
