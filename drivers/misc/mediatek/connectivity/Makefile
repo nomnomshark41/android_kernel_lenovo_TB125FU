@@ -81,9 +81,6 @@ endif
 
 # Otherwise we were called directly from the command line;
 # invoke the kernel build system.
-else
-    KERNELDIR ?= ../../../../
-    PWD  := $(shell pwd)
 default:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
 endif
