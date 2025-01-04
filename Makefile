@@ -444,8 +444,8 @@ KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS_MODULE  := -DMODULE
 KBUILD_CFLAGS_MODULE  := -DMODULE
-KBUILD_LDFLAGS_MODULE := -T $(srctree)/scripts/module-common.lds
-KBUILD_LDFLAGS :=
+KBUILD_LDFLAGS_MODULE := -T $(srctree)/scripts/module-common.lds 
+KBUILD_LDFLAGS := --allow-multiple-definition
 GCC_PLUGINS_CFLAGS :=
 CLANG_FLAGS :=
 
